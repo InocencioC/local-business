@@ -14,7 +14,7 @@ async function startup () {
     app.use(cors());
 
     app.post("/store", StoreController.save);
-    app.post("/store", StoreController.getAll);
+    app.get("/store", StoreController.getAll);
 
     app.listen(PORT, () => {
         console.log("app runnig on port " + 3000);
